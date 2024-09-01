@@ -3,8 +3,6 @@ import dotenv from 'dotenv'
 dotenv.config()
 
 const db = new Sequelize(process.env.DATABASE_URL!, {
-  dialect: 'postgres',
-  protocol: 'postgres',
     models: [__dirname + '/../models/**/*'],
     logging: false
 })
